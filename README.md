@@ -1,25 +1,44 @@
 
-Installation information
-=======
+# Cobblemizer: Reborn
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+Cobblemizer: Reborn, is an updated version of Cobblemizer for Cobblemon 1.6.1. It's a side mod designed to enhance the gameplay experience by offering items that allow players to manipulate various stats and aesthetic characteristics of Pokémon within the game.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+## Features
+- **Gender Swapper Item:** Allows swapping the gender of a Pokémon.
+- **Shiny Swapper Item:** Enables swapping the shiny status of a Pokémon.
+- **Caught Ball Swapper Items:**  Introduces items for changing the caught ball of a Pokémon.
+- **Nature Changer Items:**  Introduces items for changing the nature of a Pokémon.
+#### Tier items:
+Tier/Rarity items, with values changeable in the config (cobblemizer/cobblemizer.json)
+**Tiered items:**
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+- **Friendship Increasing Items:**  Introduces items for increasing the friendship levels of a Pokémon.
+- **IV increasing Items:**  Introduces items for increasing the IV levels of a Pokémon.
+- **EV increasing Items:**  Introduces items for increasing the EV levels of a Pokémon.
+- **Level increasing Items:**  Introduces items for increasing the Levels of a Pokémon.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+#### Randomizer items:
+- **IV Randomizer Item:** This item randomizes all IV stats of a Pokémon.
+- **EV Randomizer Item:** This item randomizes all EV stats of a Pokémon.
+- **Level Randomizer Item** An item that randomly sets a Pokémon's level between 1 and 100.
+
+## Usage
+
+Each item has a unique function, from maximizing individual stats or randomizing them entirely, to changing the gender or shiny status of your Pokémon . These tools offer greater control over Pokémon training and stats management.
+- The items are only obtainable in Creative mode, in the Cobblemizer tab.
+
+## Feedback and Contribution
+
+If you encounter any issues or have suggestions for improvement, feel free to create an issue or pull request on the GitHub repository -> [Fabric](https://github.com/alessfrn/CobblemizerRebornFabric.git) & [NeoForge](https://github.com/alessfrn/CobblemizerRebornNeoForge.git)
+
+## Credits
+
+Cobblemizer Mod was developed by Dragomordor
+Cobblemizer: Reborn was and will be updated by alessfrn
+
+## License
+
+Refer to the LICENSE file for more information.
+
+Happy Pokémon training with the Cobblemizer: Reborn Mod!
