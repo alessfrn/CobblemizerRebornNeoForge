@@ -19,6 +19,7 @@ public class CobblemizerItems {
 
     // register IVMaxerItems
     public static final DeferredHolder<Item, IVMaxerItem> ALL_IV_MAXER = registerIVMaxerItem("all_iv_maxer");
+    public static final DeferredHolder<Item, IVAllVoidItem> ALL_IV_VOIDER = registerIVAllVoidItem("all_iv_voider");
     // register IVRandomItem
     public static final DeferredHolder<Item, IVRandomItem> IV_RANDOM = registerIVRandomItem("iv_random");
     // register EVRandomItem
@@ -70,6 +71,7 @@ public class CobblemizerItems {
     public static final DeferredHolder<Item, FriendshipAddItem> FRIENDSHIP_ADD_EPIC = registerFriendshipAddItem("friendship_add_epic", "EPIC");
     public static final DeferredHolder<Item, FriendshipAddItem> FRIENDSHIP_ADD_LEGENDARY = registerFriendshipAddItem("friendship_add_legendary", "LEGENDARY");
     public static final DeferredHolder<Item, FriendshipAddItem> FRIENDSHIP_ADD_MAX = registerFriendshipAddItem("friendship_add_max", "MAX");
+    public static final DeferredHolder<Item, FriendshipVoidItem> FRIENDSHIP_VOIDER = registerFriendshipVoidItem("friendship_voider");
     // EVAddItem
     public static final DeferredHolder<Item, EVAddItem> EV_ADD_SP_DEF_COMMON = registerEVAddItem("ev_add_sp_def_common", "COMMON", Stats.SPECIAL_DEFENCE);
     public static final DeferredHolder<Item, EVAddItem> EV_ADD_SP_DEF_UNCOMMON = registerEVAddItem("ev_add_sp_def_uncommon", "UNCOMMON", Stats.SPECIAL_DEFENCE);
@@ -144,6 +146,13 @@ public class CobblemizerItems {
     public static final DeferredHolder<Item, IVAddItem> IV_ADD_HP_MAX = registerIVAddItem("iv_add_hp_max", "MAX", Stats.HP);
     public static final DeferredHolder<Item, IVAddItem> IV_ADD_HP_COMMON = registerIVAddItem("iv_add_hp_common", "COMMON", Stats.HP);
     public static final DeferredHolder<Item, IVAddItem> IV_ADD_HP_UNCOMMON = registerIVAddItem("iv_add_hp_uncommon", "UNCOMMON", Stats.HP);
+    // IVMonoVoidItem
+    public static final DeferredHolder<Item, IVMonoVoidItem> IV_MONO_VOIDER_HP = registerIVMonoVoidItem("iv_void_hp", Stats.HP);
+    public static final DeferredHolder<Item, IVMonoVoidItem> IV_MONO_VOIDER_ATK = registerIVMonoVoidItem("iv_void_atk", Stats.ATTACK);
+    public static final DeferredHolder<Item, IVMonoVoidItem> IV_MONO_VOIDER_DEF = registerIVMonoVoidItem("iv_void_def", Stats.DEFENCE);
+    public static final DeferredHolder<Item, IVMonoVoidItem> IV_MONO_VOIDER_SP_ATK = registerIVMonoVoidItem("iv_void_sp_atk", Stats.SPECIAL_ATTACK);
+    public static final DeferredHolder<Item, IVMonoVoidItem> IV_MONO_VOIDER_SP_DEF = registerIVMonoVoidItem("iv_void_sp_def", Stats.SPECIAL_DEFENCE);
+    public static final DeferredHolder<Item, IVMonoVoidItem> IV_MONO_VOIDER_SPEED = registerIVMonoVoidItem("iv_void_speed", Stats.SPEED);
     // LVLAddItem
     public static final  DeferredHolder<Item, LVLAddItem> LVL_ADD_COMMON = registerLVLAddItem("lvl_add_common", "COMMON");
     public static final  DeferredHolder<Item, LVLAddItem> LVL_ADD_UNCOMMON = registerLVLAddItem("lvl_add_uncommon", "UNCOMMON");
@@ -151,6 +160,12 @@ public class CobblemizerItems {
     public static final  DeferredHolder<Item, LVLAddItem> LVL_ADD_EPIC = registerLVLAddItem("lvl_add_epic", "EPIC");
     public static final  DeferredHolder<Item, LVLAddItem> LVL_ADD_LEGENDARY = registerLVLAddItem("lvl_add_legendary", "LEGENDARY");
     public static final DeferredHolder<Item, LVLAddItem> LVL_ADD_MAX = registerLVLAddItem("lvl_add_max", "MAX");
+    public static final DeferredHolder<Item, LVLRemoveItem> LVL_REMOVE_COMMON = registerLVLRemoveItem("level_remove_common", "COMMON");
+    public static final DeferredHolder<Item, LVLRemoveItem> LVL_REMOVE_UNCOMMON = registerLVLRemoveItem("level_remove_uncommon", "UNCOMMON");
+    public static final DeferredHolder<Item, LVLRemoveItem> LVL_REMOVE_RARE = registerLVLRemoveItem("level_remove_rare", "RARE");
+    public static final DeferredHolder<Item, LVLRemoveItem> LVL_REMOVE_EPIC = registerLVLRemoveItem("level_remove_epic", "EPIC");
+    public static final DeferredHolder<Item, LVLRemoveItem> LVL_REMOVE_LEGENDARY = registerLVLRemoveItem("level_remove_legendary", "LEGENDARY");
+    public static final DeferredHolder<Item, LVLRemoveItem> LVL_REMOVE_MAX = registerLVLRemoveItem("level_remove_max", "MAX");
     // NatureChangerItem
     public static final DeferredHolder<Item, NatureChangerItem> NATURE_CHANGER_ADAMANT = registerNatureChangerItem("nature_changer_adamant", Natures.INSTANCE.getADAMANT());
     public static final DeferredHolder<Item, NatureChangerItem> NATURE_CHANGER_BASHFUL = registerNatureChangerItem("nature_changer_bashful", Natures.INSTANCE.getBASHFUL());
@@ -193,6 +208,12 @@ public class CobblemizerItems {
     private static DeferredHolder<Item, IVMaxerItem> registerIVMaxerItem(String name) {
         return ITEMS.register(name, IVMaxerItem::new);
     }
+    private static DeferredHolder<Item, IVAllVoidItem> registerIVAllVoidItem(String name) {
+        return ITEMS.register(name, IVAllVoidItem::new);
+    }
+    private static DeferredHolder<Item, IVMonoVoidItem> registerIVMonoVoidItem(String name, Stat statToBoost) {
+        return ITEMS.register(name, () -> new IVMonoVoidItem(statToBoost));
+    }
     // Register IVRandomizer item type
     private static DeferredHolder<Item, IVRandomItem> registerIVRandomItem(String name) {
         return ITEMS.register(name, IVRandomItem::new);
@@ -222,6 +243,9 @@ public class CobblemizerItems {
     private static DeferredHolder<Item, FriendshipAddItem> registerFriendshipAddItem(String name, String tier) {
         return ITEMS.register(name, () -> new FriendshipAddItem(tier));
     }
+    private static DeferredHolder<Item, FriendshipVoidItem> registerFriendshipVoidItem(String name) {
+        return ITEMS.register(name, FriendshipVoidItem::new);
+    }
     // Register EVAddItem item type
     private static DeferredHolder<Item, EVAddItem> registerEVAddItem(String name, String tier, Stat statToBoost) {
         return ITEMS.register(name, () -> new EVAddItem(tier, statToBoost));
@@ -233,6 +257,10 @@ public class CobblemizerItems {
     // Register LVLAddItem item type
     private static DeferredHolder<Item, LVLAddItem> registerLVLAddItem(String name, String tier) {
         return ITEMS.register(name, () -> new LVLAddItem(tier));
+    }
+    // Register LVLRemoveItem item type
+    private static DeferredHolder<Item, LVLRemoveItem> registerLVLRemoveItem(String name, String tier) {
+        return ITEMS.register(name, () -> new LVLRemoveItem(tier));
     }
     // Register NatureChangerItem item type
     private static DeferredHolder<Item, NatureChangerItem> registerNatureChangerItem(String name, Nature nature) {

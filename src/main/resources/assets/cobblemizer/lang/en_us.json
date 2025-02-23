@@ -37,6 +37,7 @@
   "item.cobblemizer.friendship_add_epic": "Friendship increase - EPIC",
   "item.cobblemizer.friendship_add_legendary": "Friendship increase - LEGENDARY",
   "item.cobblemizer.friendship_add_max": "Friendship MAX",
+  "item.cobblemizer.friendship_voider": "Friendship Reset",
 
   "item.cobblemizer.ev_random": "EV Random",
   "item.cobblemizer.ev_add_sp_atk_common": "Special Attack EV increase - COMMON",
@@ -114,6 +115,13 @@
   "item.cobblemizer.iv_add_hp_epic": "HP IV increase - EPIC",
   "item.cobblemizer.iv_add_hp_legendary": "HP IV increase - LEGENDARY",
   "item.cobblemizer.iv_add_hp_max": "HP IV Max",
+  "item.cobblemizer.all_iv_voider": "All IV Reset",
+  "item.cobblemizer.iv_void_atk": "Attack IV Reset",
+  "item.cobblemizer.iv_void_def": "Defense IV Reset",
+  "item.cobblemizer.iv_void_hp": "HP IV Reset",
+  "item.cobblemizer.iv_void_sp_atk": "Special Attack IV Reset",
+  "item.cobblemizer.iv_void_sp_def": "Special Defence IV Reset",
+  "item.cobblemizer.iv_void_speed": "Speed IV Reset",
 
   "item.cobblemizer.level_random": "Level Random",
   "item.cobblemizer.lvl_add_common": "Level increase - COMMON",
@@ -122,6 +130,13 @@
   "item.cobblemizer.lvl_add_epic": "Level increase - EPIC",
   "item.cobblemizer.lvl_add_legendary": "Level increase - LEGENDARY",
   "item.cobblemizer.lvl_add_max": "Level Max",
+  "item.cobblemizer.lvl_remove_common": "Level remove - COMMON",
+  "item.cobblemizer.lvl_remove_uncommon": "Level remove - UNCOMMON",
+  "item.cobblemizer.lvl_remove_rare": "Level remove - RARE",
+  "item.cobblemizer.lvl_remove_epic": "Level remove - EPIC",
+  "item.cobblemizer.lvl_remove_legendary": "Level remove - LEGENDARY",
+  "item.cobblemizer.lvl_remove_max": "Level Reset",
+
 
   "item.cobblemizer.gender_swapper": "Gender Swap",
   "item.cobblemizer.shiny_swapper": "Shiny Status Swap",
@@ -152,5 +167,5 @@
   "item.cobblemizer.nature_changer_serious": "Nature Changer - Serious",
   "item.cobblemizer.nature_changer_timid": "Nature Changer - Timid",
 
-  "itemgroup.cobblemizer": "Cobblemizer"
+  "itemgroup.cobblemizer": "Cobblemizer",
 }

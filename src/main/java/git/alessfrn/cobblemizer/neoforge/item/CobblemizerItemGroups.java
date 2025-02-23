@@ -58,6 +58,7 @@ public class CobblemizerItemGroups {
                         pOutput.accept(CobblemizerItems.FRIENDSHIP_ADD_EPIC.get());
                         pOutput.accept(CobblemizerItems.FRIENDSHIP_ADD_LEGENDARY.get());
                         pOutput.accept(CobblemizerItems.FRIENDSHIP_ADD_MAX.get());
+                        pOutput.accept(CobblemizerItems.FRIENDSHIP_VOIDER.get());
                         // EVRandom
                         pOutput.accept((CobblemizerItems.EV_RANDOM.get()));
                         //EVAddItem
@@ -99,6 +100,8 @@ public class CobblemizerItemGroups {
                         pOutput.accept((CobblemizerItems.EV_ADD_HP_MAX.get()));
                         // IVMaxer
                         pOutput.accept((CobblemizerItems.ALL_IV_MAXER.get()));
+                        // IVAllVoider
+                        pOutput.accept((CobblemizerItems.ALL_IV_VOIDER.get()));
                         // IVRandom
                         pOutput.accept((CobblemizerItems.IV_RANDOM.get()));
                         // IVAddItem
@@ -138,6 +141,13 @@ public class CobblemizerItemGroups {
                         pOutput.accept((CobblemizerItems.IV_ADD_HP_EPIC.get()));
                         pOutput.accept((CobblemizerItems.IV_ADD_HP_LEGENDARY.get()));
                         pOutput.accept((CobblemizerItems.IV_ADD_HP_MAX.get()));
+                        // IVMonoVoidItem
+                        pOutput.accept((CobblemizerItems.IV_MONO_VOIDER_SP_DEF.get()));
+                        pOutput.accept((CobblemizerItems.IV_MONO_VOIDER_SP_ATK.get()));
+                        pOutput.accept((CobblemizerItems.IV_MONO_VOIDER_SPEED.get()));
+                        pOutput.accept((CobblemizerItems.IV_MONO_VOIDER_ATK.get()));
+                        pOutput.accept((CobblemizerItems.IV_MONO_VOIDER_DEF.get()));
+                        pOutput.accept((CobblemizerItems.IV_MONO_VOIDER_HP.get()));
                         // LVLAddItem
                         pOutput.accept((CobblemizerItems.LVL_ADD_COMMON.get()));
                         pOutput.accept((CobblemizerItems.LVL_ADD_UNCOMMON.get()));
@@ -145,6 +155,14 @@ public class CobblemizerItemGroups {
                         pOutput.accept((CobblemizerItems.LVL_ADD_EPIC.get()));
                         pOutput.accept((CobblemizerItems.LVL_ADD_LEGENDARY.get()));
                         pOutput.accept((CobblemizerItems.LVL_ADD_MAX.get()));
+                        pOutput.accept((CobblemizerItems.LVL_ADD_MAX.get()));
+                        // LVLRemoveItem
+                        pOutput.accept((CobblemizerItems.LVL_REMOVE_COMMON.get()));
+                        pOutput.accept((CobblemizerItems.LVL_REMOVE_UNCOMMON.get()));
+                        pOutput.accept((CobblemizerItems.LVL_REMOVE_RARE.get()));
+                        pOutput.accept((CobblemizerItems.LVL_REMOVE_EPIC.get()));
+                        pOutput.accept((CobblemizerItems.LVL_REMOVE_LEGENDARY.get()));
+                        pOutput.accept((CobblemizerItems.LVL_REMOVE_MAX.get()));
                         // LVLRandom
                         pOutput.accept((CobblemizerItems.LVL_RANDOM.get()));
                          // NatureChangerItems
